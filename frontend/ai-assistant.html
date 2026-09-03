@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediKiosk | AI Healthcare Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🏥 MediKiosk</h1>
+    <p>AI Healthcare Assistant</p>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h2>🤖 MediKiosk AI Assistant</h2>
+
+        <p>
+            Describe your symptoms or health concern to receive
+            preliminary healthcare information and guidance.
+        </p>
+
+        <div id="chatBox">
+            <div id="messages">
+                <p>
+                    <strong>AI Assistant:</strong>
+                    Hello! How can I help you today?
+                </p>
+            </div>
+
+            <textarea
+                id="userMessage"
+                placeholder="Describe your symptoms or health concern..."
+            ></textarea>
+
+            <button onclick="sendMessage()">
+                Send Message
+            </button>
+        </div>
+
+    </section>
+
+    <section class="hero">
+        <h3>⚠️ Important</h3>
+
+        <p>
+            This AI assistant provides preliminary information only.
+            It does not diagnose diseases, prescribe medicines,
+            or replace a qualified healthcare professional.
+        </p>
+
+        <p>
+            If you have severe or emergency symptoms, seek
+            immediate professional medical care.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 MediKiosk</p>
+    <small>AI-powered preliminary healthcare assistance</small>
+</footer>
+
+<script>
+async function sendMessage() {
+
+    const input = document.getElementById("userMessage");
+    const messages = document.getElementById("messages");
+
+    const message = input.value.trim();
+
+    if (!message) {
+        return;
+    }
+
+    messages.innerHTML += `
+        <p>
+            <strong>You:</strong> ${message}
+        </p>
+    `;
+
+    input.value = "";
+
+    messages.innerHTML += `
+        <p>
+            <strong>AI Assistant:</strong>
+            Your concern has been received. This is a preliminary
+            demonstration response. Please consult a qualified
+            healthcare professional for proper evaluation.
+        </p>
+    `;
+
+    messages.scrollTop = messages.scrollHeight;
+}
+</script>
+
+</body>
+</html>
