@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediKiosk | Smart Healthcare</title>
+
+    <meta name="description"
+          content="MediKiosk is an AI-powered smart healthcare kiosk for preliminary health assessment and patient assistance.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏥 MediKiosk</h1>
+        <p>AI-Powered Smart Healthcare Assistant</p>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h2>Welcome to MediKiosk</h2>
+            <p>
+                Get preliminary health guidance, record your symptoms,
+                and connect with healthcare professionals.
+            </p>
+
+            <button onclick="startAssessment()">
+                Start Health Assessment
+            </button>
+        </section>
+
+        <section id="assessment" class="assessment">
+            <h2>Health Assessment</h2>
+
+            <label for="name">Patient Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label for="symptoms">Describe Your Symptoms</label>
+            <textarea id="symptoms"
+                      placeholder="Describe your symptoms..."></textarea>
+
+            <button onclick="analyzeSymptoms()">
+                Get Preliminary Guidance
+            </button>
+
+            <div id="result"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 MediKiosk | AI Healthcare Innovation</p>
+        <small>
+            For preliminary guidance only. Not a replacement for professional medical advice.
+        </small>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
