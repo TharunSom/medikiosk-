@@ -1,0 +1,14 @@
+MediKiosk/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── package.json
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── backend/
+│   └── server.js
+└── ai/
+    ├── ai_assistant.py
+    └── requirements.txt
